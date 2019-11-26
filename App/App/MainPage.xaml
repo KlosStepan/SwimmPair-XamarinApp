@@ -2,13 +2,22 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:App"
-             x:Class="App.MainPage">
+             x:Class="App.MainPage"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+             ios:Page.UseSafeArea="true">
 
-    <StackLayout>
+    <StackLayout VerticalOptions="Center">
         <!-- Place new controls here -->
-        <Label Text="Welcome to the SwimmPair Application!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+        <Image Source="https://rozhodci.kps-olk.cz/img/1EDLRUR2Y1EM5LWZ2TPRLNA2C54FFF_slice_80h.png"
+               Margin="0,0,0,20"/>
+        <Label Text="Jméno"
+               HorizontalOptions="Center"/>
+        <Entry  x:Name="LabelLogin" Text="" />
+        <Label Text="Heslo"
+               HorizontalOptions="Center"/>
+        <Entry  x:Name="LabelPassword" Text="" />
+        <Button x:Name="ButtonLogin"
+                Text="Přihlásit se"
+                Clicked="ButtonLogin_OnClicked"/>
     </StackLayout>
-
 </ContentPage>

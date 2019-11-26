@@ -12,6 +12,13 @@ namespace App
         public MainPage()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
+        }
+
+        private void ButtonLogin_OnClicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new Profile());
+            //throw new NotImplementedException();
         }
     }
 }
